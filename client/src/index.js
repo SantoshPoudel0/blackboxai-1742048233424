@@ -1,8 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+// Import Tailwind CSS
+import './styles/tailwind.css';
+
+// Import Google Fonts
+const googleFontsLink = document.createElement('link');
+googleFontsLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
+googleFontsLink.rel = 'stylesheet';
+document.head.appendChild(googleFontsLink);
+
+// Import Font Awesome
+const fontAwesomeLink = document.createElement('link');
+fontAwesomeLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css';
+fontAwesomeLink.rel = 'stylesheet';
+document.head.appendChild(fontAwesomeLink);
+
+// Import Tailwind CSS via CDN
+const tailwindScript = document.createElement('script');
+tailwindScript.src = 'https://cdn.tailwindcss.com';
+document.head.appendChild(tailwindScript);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -10,8 +28,3 @@ root.render(
     <App />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
